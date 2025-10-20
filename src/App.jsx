@@ -5,6 +5,7 @@ import { supabase } from './utils/supabaseClient';
 import Auth from './pages/Auth';
 import Home from './pages/Home';
 import FolderView from './pages/FolderView';
+import SEOHead from './components/SEOHead';
 
 function App() {
   const [session, setSession] = useState(null);
@@ -37,6 +38,13 @@ function App() {
 
   return (
     <Router>
+      <SEOHead
+        title="Eng - Learn English Vocabulary with Audio Pronunciation"
+        description="Master English vocabulary with our beautiful pink-themed learning app. Create custom folders, add words with translations, and listen to American accent pronunciation. Perfect for language learners!"
+        keywords="English vocabulary, learn English, vocabulary app, pronunciation, American accent, language learning, English words, translation, study English"
+        url="https://eng-vocabulary.com"
+        image="https://eng-vocabulary.com/og-image.png"
+      />
       <Toaster
         position="top-center"
         toastOptions={{
